@@ -1,0 +1,12 @@
+{
+  "categories" :[
+    "Category 111111111111111111",
+    "Category 2",
+    "Category 3"
+  ],
+  "auth" : {
+    "name" : "MyName",
+    "surname" : "MySurname",
+    "age" : 23
+  }
+}

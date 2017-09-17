@@ -1,0 +1,17 @@
+li{
+    display: inline-block;
+    margin: 10px;
+}
+.menu-with-submenu{
+    position: relative;
+}
+.submenu{
+    position: absolute;
+    display: none;
+}
+.submenu li{
+    display: block;
+}
+.menu-with-submenu:hover .submenu{
+    display: block;
+}
