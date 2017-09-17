@@ -1,9 +1,7 @@
 const promises = {
     init: () => {
         return new Promise((resolve) => {
-            console.log('init');
             if(typeof FB !== 'undefined'){
-                console.log('undefined');
                 resolve();
             }else{
                 window.fbAsyncInit = () => {
@@ -51,7 +49,7 @@ const promises = {
     fetch: () => {
         return new Promise((resolve,reject) => {
             window.FB.api(
-                '/me?fields=first_name,last_name,gender,birthday,picture.width(720).height(720)',
+                '/me?fields=first_name,last_name,gender,birthday,picture.width(200).height(200)',
                 response => response.error ? reject(response) : resolve(response)
             );
         });
@@ -109,7 +107,7 @@ export const Facebook = {
             )
             .then(
                 promises.logout,
-                error => { throw error; }
+                (response) => this.props.logOut(),
             )
             .then(
                 () => { this.props.logOut(); },
@@ -120,82 +118,3 @@ export const Facebook = {
             })
     }
 };
-// export const Facebook = {
-//     doLogin(){
-//         this.setState({
-//             loading: true
-//         }, () => {
-//             promises.init()
-//                 .then(
-//                     promises.checkLoginState,
-//                     error => {throw error}
-//                 )
-//                 .then(
-//                     response => { this.setState({ status: response.status}); },
-//                     promises.login
-//                 )
-//                 .then(
-//                     promises.fetch,
-//                     error => { throw error}
-//                 )
-//                 .then(
-//                     response => { this.setState({loading: false, data:response, status: 'connected'}); },
-//                     error => { throw error}
-//                 )
-//                 .catch((error) => {
-//                     this.setState({loading: false, data: {}, status: 'unknown'});
-//                     console.warn(error);
-//                 });
-//         });
-//     },
-//     doLogout(){
-//         this.setState({
-//             loading: true
-//         }, () => {
-//             promises.init()
-//                 .then(
-//                     promises.checkLoginState,
-//                     error => {throw error}
-//                 )
-//                 .then(
-//                     promises.logout,
-//                     error => { this.setState({data: {}, status: 'unknown'}); }
-//                 )
-//                 .then(
-//                     response => { this.setState({ loading: false, data: {}, status: 'unknown'}); },
-//                     error => { throw error}
-//                 )
-//                 .catch(error => {
-//                     this.setState({ loading: false, data: {}, status: 'unknown'});
-//                     console.warn(error);
-//                 });
-//             });
-//     },
-//     checkStatus(){
-//         this.setState({
-//             loading: true
-//         }, () => {
-//             promises.init()
-//                 .then(
-//                     promises.checkLoginState,
-//                     error => { throw error}
-//                 )
-//                 .then(
-//                     response => {this.setState({ status: response.status }); },
-//                     error => {throw error }
-//                 )
-//                 .then(
-//                     promises.fetch,
-//                     error => { throw error }
-//                 )
-//                 .then(
-//                     response => { this.setState({ loading: false, data: response, status: 'connected'}); },
-//                     error => { throw error }
-//                 )
-//                 .catch( (error) => {
-//                     this.setState({loading: false, data: {}, status: 'unknown'});
-//                     console.warn(error)
-//                 });
-//         });
-//     }
-// };

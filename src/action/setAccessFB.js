@@ -5,7 +5,7 @@ export default function setAccessFB(firstName,lastName,birthday,imgSrc) {
         access: false,
         name: firstName,
         surname: lastName,
-        date: birthday,
+        regDate: birthday,
         imgSrc : imgSrc
     }
 }

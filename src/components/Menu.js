@@ -6,16 +6,16 @@ import '../css/menu.css'
 // import TopContent from '../../containers/body/topContent'
 
 export default class Menu extends Component{
-    constructor(props){
-        super(props);
-        this.onClickLogout = this.onClickLogout.bind(this);
-    }
+    // constructor(props){
+    //     super(props);
+    //     // this.onClickLogout = this.onClickLogout.bind(this);
+    // }
 
     render(){
         return(
             <ul >
                 <li><Link to = '/'>Home</Link></li>
-                {/*<li><Link to = '/about'>About</Link></li>*/}
+                {/*<li><Link to = '/profile'>About</Link></li>*/}
                 {/*<li className="menu-with-submenu">*/}
                     {/*<Link to = '/cate'>Categories</Link>*/}
                     {/*<ul className="submenu">*/}

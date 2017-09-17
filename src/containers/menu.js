@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Menu from '../components/Menu';
 import logOut from '../action/logOut';
+import setLoading from '../action/setLoading';
 import { Facebook } from '../else/mixinsFacebook';
+import Menu from '../components/Menu';
 
 class menu extends Component{
     constructor(props){
@@ -30,16 +31,18 @@ class menu extends Component{
         )
     }
 }
+
 function mapStateToProps(state){
     return{
         auth: state.auth
     }
 }
+
 function mapDispatchToProps(dispatch){
     return{
-        logOut: bindActionCreators(logOut,dispatch)
+        logOut: bindActionCreators(logOut,dispatch),
+        loading: bindActionCreators(setLoading,dispatch)
     }
 }
-// {/*<li key = '2'><Link to = '/logIn'>Log In</Link></li>*/}
 
 export default connect(mapStateToProps, mapDispatchToProps)(menu);

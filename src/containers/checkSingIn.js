@@ -1,30 +1,22 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import SingIn from '../components/singIn';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import setAccess from '../action/setAccess';
 import setAccessFB from '../action/setAccessFB';
 import setLoading from '../action/setLoading';
 import { Facebook } from '../else/mixinsFacebook';
+import SingIn from '../components/singIn';
 
 class PrivateRouter extends Component{
     constructor(props){
         super(props);
         this.checkFBLogin = this.checkFBLogin.bind(this);
         Facebook.doLogin = Facebook.doLogin.bind(this);
-        this.state = {
-            status: 'unknown',
-            loading: false,
-            data: {}
-        };
-    }
-    checkFBLogin(){
-
     }
     render(){
         const loading = this.props.auth.loading ? <p>Please wait</p> : null;
-        console.log(loading);
+        // console.log(loading);
         return(
             (this.props.auth.access) ?
                 (<SingIn

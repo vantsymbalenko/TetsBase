@@ -7,7 +7,7 @@ export default function setAccess(login, password){
             access: false,
             name: 'Name',
             surname: 'Surname',
-            date: new Date(),
+            regDate: new Date(1995, 2, 3).toString(),
             imgSrc: pathImg
         }
     }

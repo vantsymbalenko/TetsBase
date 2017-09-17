@@ -5,7 +5,7 @@ export default function auth (state = {access : true }, action){
                 access: action.access,
                 name: action.name,
                 surname: action.surname,
-                regDate: action.date,
+                regDate: action.regDate,
                 imgSrc: action.imgSrc
             };
         case 'SET_ERRORS':
