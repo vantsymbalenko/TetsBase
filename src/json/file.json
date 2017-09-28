@@ -1,8 +1,70 @@
 {
   "categories" :[
-    "Category 111111111111111111",
-    "Category 2",
-    "Category 3"
+    [
+      "category 1",
+      [
+        "test 11",
+        [
+          {
+            "question": "What franchise would you rather play a game from?",
+            "answers": [
+              {
+                "type":true,
+                "content": "Halo"
+              },
+              {
+                "type": false,
+                "content": "Else"
+              }
+            ]
+          },
+          {
+            "question": "Which console would you prefer to play with friends?",
+            "answers": [
+              {
+                "type": true,
+                "content": "X-Box"
+              },
+              {
+                "type": false,
+                "content": "X"
+              }
+            ]
+          }
+          ]
+      ],
+      [
+        "test 2_1",
+        [
+          {
+            "question": "Some question in test 2_1",
+            "answers": [
+              {
+                "type":true,
+                "content": "some answer 2_1"
+              },
+              {
+                "type":false,
+                "content": "some answer 2_2"
+              }
+            ]
+          },
+          {
+            "question": "Some question in test 2_2",
+            "answers": [
+              {
+                "type":true,
+                "content": "some answer 2_2"
+              },
+              {
+                "type":false,
+                "content": "some answer 2_3"
+              }
+            ]
+          }
+        ]
+      ]
+    ]
   ],
   "auth" : {
     "name" : "MyName",

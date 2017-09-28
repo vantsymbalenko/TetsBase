@@ -11,7 +11,7 @@ import SingIn from '../components/singIn';
 class PrivateRouter extends Component{
     constructor(props){
         super(props);
-        this.checkFBLogin = this.checkFBLogin.bind(this);
+        // this.checkFBLogin = this.checkFBLogin.bind(this);
         Facebook.doLogin = Facebook.doLogin.bind(this);
     }
     render(){
@@ -33,6 +33,7 @@ class PrivateRouter extends Component{
 function mapStateToProps(state){
     return{
         auth    : state.auth
+
     }
 }
 function mapDispatchToProps(dispatch) {

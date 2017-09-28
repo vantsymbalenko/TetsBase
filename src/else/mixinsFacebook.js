@@ -6,8 +6,7 @@ const promises = {
             }else{
                 window.fbAsyncInit = () => {
                     console.log('fbAsyncInit');
-                    let FB;
-                    FB.init({
+                    window.FB.init({
                         appId   : 1904739873076289,
                         cookie  : true,
                         xfbml   : true,
