@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import path from '../image/foto.jpg';
-
 
 export default class Home extends Component{
     render(){

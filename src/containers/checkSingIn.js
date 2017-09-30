@@ -11,12 +11,10 @@ import SingIn from '../components/singIn';
 class PrivateRouter extends Component{
     constructor(props){
         super(props);
-        // this.checkFBLogin = this.checkFBLogin.bind(this);
         Facebook.doLogin = Facebook.doLogin.bind(this);
     }
     render(){
         const loading = this.props.auth.loading ? <p>Please wait</p> : null;
-        // console.log(loading);
         return(
             (this.props.auth.access) ?
                 (<SingIn

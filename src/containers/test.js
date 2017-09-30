@@ -87,21 +87,10 @@ import jsonData from '../json/file.json';
      }
 
      getResults() {
-         // const answersCount = this.state.answersCount;
-         // const answersCountKeys = Object.keys(answersCount);
-         // const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
-         // const maxAnswerCount = Math.max.apply(null, answersCountValues);
-
-         // return answersCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
          return this.state.answersCount;
      }
 
      setResults(result) {
-         // if (result.length === 1) {
-         //     this.setState({ result: result[0] });
-         // } else {
-         //     this.setState({ result: 'Undetermined' });
-         // }
          this.setState({result: result});
      }
 
@@ -128,7 +117,6 @@ import jsonData from '../json/file.json';
          return (
              <div className="App">
                  <div className="App-header">
-                     {/*<img src={logo} className="App-logo" alt="logo" />*/}
                      <h2>React Quiz</h2>
                  </div>
                  {this.state.result !== "" ? this.renderResult() : this.renderQuiz()}

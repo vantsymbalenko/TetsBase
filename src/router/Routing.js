@@ -4,10 +4,10 @@ import {
     Link,
     Switch
 } from 'react-router-dom';
-import '../css/menu.css';
-import 'bootstrap/dist/css/bootstrap.css'
-// import $ from 'jQuery';
 
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+import 'bootstrap/dist/js/bootstrap.js';
 
 import SingIn from '../containers/checkSingIn';
 import Home from '../containers/home';
@@ -15,66 +15,75 @@ import Profile from '../containers/profile';
 import Search from '../containers/search';
 import Test from '../containers/test';
 import AllTests from '../containers/allTests';
-
-
+import About from '../containers/about';
 
 export default class Routing extends Component{
     constructor(props){
         super(props);
-        this.Console = this.Console.bind(this);
-        this.onClickButtonSearch = this.onClickButtonSearch.bind(this);
+        this.onClickSearch = this.onClickSearch.bind(this);
     }
-    Console(){
-        this.test = this.searchInput.value;
-    }
-    onClickButtonSearch(){
-       console.log(this.searchInput.value);
+    onClickSearch(){
        this.props.onSearch(this.searchInput.value);
     }
     render(){
-        // let test = this.InputSearch;
-        // console.log('/search/'+this.InputSearch);
         return(
             <div>
-                <nav className = "navbar navbar-default">
-                    <div className = "container-fluid">
-                        <div className = "navbar-header">
-                            <Link to = "/" className = "navbar-brand">WebsiteLogo</Link>
+                <nav className="navbar navbar-inverse">
+                    <div className="container-fluid">
+                        <div className="navbar-header">
+                            <button
+                                type="button"
+                                className="navbar-toggle"
+                                data-toggle="collapse"
+                                data-target="#myNavbar"
+                            >
+                                <span className="icon-bar"></span>
+                                <span className="icon-bar"></span>
+                                <span className="icon-bar"></span>
+                            </button>
+                            <Link className="navbar-brand" to="/">WebSiteName</Link>
                         </div>
-                        <ul className = "nav navbar-nav">
-                            <li><Link to = '/'>Home</Link></li>
-                            <li><Link to = '/allTests'>All tests</Link></li>
-                            {/*<ul className="submenu">*/}
-                            {/*<li><Link to = '/cate/subCate1'>Subcate1</Link></li>*/}
-                            {/*<li><Link to = '/cate/subCate2'>Subcate2</Link></li>*/}
-                            {/*<li><Link to = '/cate/subCate3'>Subcate3</Link></li>*/}
-                            {/*</ul>*/}
-                            {this.props.logIn}
-                            <li>
-                                <label>
-                                    <input
-                                        type="text"
-                                        ref = {(input) => {this.searchInput = input;}}
-                                        defaultValue = 'sdaada'
-                                        onChange = {this.Console}
-                                    />
-                                    <Link to = '/search'><button onClick ={this.onClickButtonSearch} >Search</button></Link>
-                                </label>
-                            </li>
-                        </ul>
+                        <div className="collapse navbar-collapse" id="myNavbar">
+                            <ul className="nav navbar-nav">
+                                <li><Link to="/about">About us</Link></li>
+                                <li><Link to="/allTests">All Tests</Link></li>
+                            </ul>
+                            <ul className="nav navbar-nav navbar-right">
+                                <li>
+                                    <form className="navbar-form navbar-left">
+                                        <div className="input-group">
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                placeholder="Search"
+                                                ref = {(input) => {this.searchInput = input;}}
+                                            />
+                                                <div className="input-group-btn">
+                                                    <Link
+                                                        to="/search"
+                                                        className="btn btn-default"
+                                                        onClick ={this.onClickSearch}
+                                                    >
+                                                            <i className="glyphicon glyphicon-search"></i>
+                                                    </Link>
+                                                </div>
+                                        </div>
+                                    </form>
+                                </li>
+                                {this.props.logIn}
+                            </ul>
+                        </div>
                     </div>
                 </nav>
                 <Switch>
                     <Route exact path = '/' component = {Home}/>
-                    {/*<Route path = '/about' component = {About}/>*/}
-                    {/*<Route path = '/cate' component = {Categories}/>*/}
+                    <Route path = '/about' component = {About}/>
                     <Route path = '/profile' component = {Profile}/>
                     <Route path = '/singIn' component = {SingIn}/>
                     <Route path = '/allTests' component = {AllTests}/>
                     <Route path = '/search'
                     render = {(props) => <Search test = {this.test} {...props}/>} />
                     <Route path = '/test/:categoryId/:testId' component = {Test}/>
-                    {/*<Route path = '/logIn' component = {LogIn}/>*/}
                 </Switch>
             </div>
         )

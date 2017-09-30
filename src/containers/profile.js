@@ -32,11 +32,5 @@ function mapStateToProps(state){
     }
 }
 
-function mapDispatchToProps(){
-    return {
-
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(profile);
+export default connect(mapStateToProps)(profile);
 

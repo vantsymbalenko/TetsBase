@@ -14,9 +14,4 @@ function mapStateToProps(state) {
         imgSrc: state.auth.imgSrc
     }
 }
-function mapDispatchToProps(){
-    return{
-
-    }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(home);
+export default connect(mapStateToProps)(home);

@@ -13,8 +13,7 @@ class routs extends Component{
         super(props);
         Facebook.doLogout = Facebook.doLogout.bind(this);
     }
-    logoutHandler(e){
-        e.preventDefault();
+    logoutHandler(){
         Facebook.doLogout();
     }
     onClickSearch(){
@@ -27,11 +26,23 @@ class routs extends Component{
         let logIn;
         if(!this.props.auth.access){
             logIn = [
-                <li key = '1'>Hello <Link to = '/profile'>{this.props.auth.name}</Link></li>,
-                <li key = '2'><button onClick = {this.logoutHandler}>Log OUT</button></li>
+                <li key = '1' className="dropdown">
+                    <a className="dropdown-toggle" data-toggle="dropdown" href="#">{this.props.auth.name}
+                        <span className="caret"></span>
+                    </a>
+                    <ul className="dropdown-menu">
+                        <li><Link to="/profile">Profile</Link></li>
+                        <li><Link to="/" onClick = {this.logoutHandler}>Logout</Link></li>
+                    </ul>
+                </li>
             ]
         } else {
-            logIn = [ <li key = '1'><Link to = '/singIn'>Sing In</Link></li> ];
+            logIn = [<li key = '1'>
+                        <Link to = '/singIn'>
+                            <span className="glyphicon glyphicon-log-in"></span>Login
+                        </Link>
+                    </li>
+                    ];
         }
         return(
             <Router>
