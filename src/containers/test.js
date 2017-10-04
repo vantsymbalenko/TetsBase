@@ -35,7 +35,7 @@ import jsonData from '../json/file.json';
          });
      }
 
-     shuffleArray(array) {
+      shuffleArray(array) {
          let currentIndex = array.length, temporaryValue, randomIndex;
 
          // While there remain elements to shuffle...
