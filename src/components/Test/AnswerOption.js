@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 function AnswerOption(props) {
-
+    // console.log(props.answerContent.toString());
     return (
         <li className="answerOption">
             <input

@@ -1,64 +1,138 @@
 {
   "categories" :[
     [
-      "category 1",
+      "Electronics",
       [
-        "test 11",
+        "Electronic test 1",
         [
           {
-            "question": "What franchise would you rather play a game from?",
+            "question": "1300 × 10e(-12) F is the same as 1300 ___",
             "answers": [
               {
-                "type":true,
-                "content": "Halo"
+                "type":false,
+                "content": "mF"
               },
               {
                 "type": false,
-                "content": "Else"
-              }
-            ]
-          },
-          {
-            "question": "Which console would you prefer to play with friends?",
-            "answers": [
+                "content": "uF"
+              },
               {
                 "type": true,
-                "content": "X-Box"
+                "content": "pF"
               },
               {
                 "type": false,
-                "content": "X"
+                "content": "nF"
               }
             ]
           }
           ]
       ],
       [
-        "test 2_1",
+        "Electronic test 2",
         [
           {
-            "question": "Some question in test 2_1",
+            "question": "If a capacitor is placed across a 20 V source, what will be the amount of charge after 5 tc?",
             "answers": [
               {
-                "type":true,
-                "content": "some answer 2_1"
+                "type":false,
+                "content": "5.0 V"
               },
               {
                 "type":false,
-                "content": "some answer 2_2"
+                "content": "12.8 V"
+              },
+              {
+                "type":false,
+                "content": "13.5 V"
+              },
+              {
+                "type":true,
+                "content": "20 V"
               }
             ]
           },
           {
-            "question": "Some question in test 2_2",
+            "question": "What is the impedance of an ac RC parallel circuit if the resistance is 12 ohms and the capacitive reactance equals 5 ohms?",
             "answers": [
               {
-                "type":true,
-                "content": "some answer 2_2"
+                "type":false,
+                "content": "0.2 ohms"
               },
               {
                 "type":false,
-                "content": "some answer 2_3"
+                "content": "3.5 ohms"
+              },
+              {
+                "type":true,
+                "content": "4.6 ohms"
+              },
+              {
+                "type":false,
+                "content": "13 ohms"
+              }
+            ]
+          },
+          {
+            "question": "What is the power factor if the apparent power of a circuit is 5 W, while the true power is 4 W?",
+            "answers": [
+              {
+                "type":false,
+                "content": "0.0 W"
+              },
+              {
+                "type":true,
+                "content": "0.8 W"
+              },
+              {
+                "type":false,
+                "content": "1.0 W"
+              },
+              {
+                "type":false,
+                "content": "1.25 W"
+              }
+            ]
+          },
+          {
+            "question": "If the reactive power of a circuit is 50 mW while the apparent power is 64 mW, then what is the true power of the circuit?",
+            "answers": [
+              {
+                "type":false,
+                "content": "14 mW"
+              },
+              {
+                "type":false,
+                "content": "36 mW"
+              },
+              {
+                "type":true,
+                "content": "40 mW"
+              },
+              {
+                "type":false,
+                "content": "114 mW"
+              }
+            ]
+          },
+          {
+            "question": "What do variable capacitors use for dielectric?",
+            "answers": [
+              {
+                "type":false,
+                "content": "ceramic, electrolytic, mica, or paper"
+              },
+              {
+                "type":true,
+                "content": "air, ceramic, mica, or plastic"
+              },
+              {
+                "type":false,
+                "content": "ceramic, paper, plastic, or mica"
+              },
+              {
+                "type":false,
+                "content": "mica, ceramic, plastic, or electrolytic"
               }
             ]
           }
@@ -67,8 +141,8 @@
     ]
   ],
   "auth" : {
-    "name" : "MyName",
-    "surname" : "MySurname",
+    "name" : "AdminName",
+    "surname" : "AdminSurname",
     "age" : 23
   }
 }

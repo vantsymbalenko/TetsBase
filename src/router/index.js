@@ -27,7 +27,7 @@ class routs extends Component{
         if(!this.props.auth.access){
             logIn = [
                 <li key = '1' className="dropdown">
-                    <a className="dropdown-toggle" data-toggle="dropdown" href="#">{this.props.auth.name}
+                    <a className="dropdown-toggle" data-toggle="dropdown" href="/">{this.props.auth.name}
                         <span className="caret"></span>
                     </a>
                     <ul className="dropdown-menu">
@@ -39,7 +39,7 @@ class routs extends Component{
         } else {
             logIn = [<li key = '1'>
                         <Link to = '/singIn'>
-                            <span className="glyphicon glyphicon-log-in"></span>Login
+                            <span className="glyphicon glyphicon-log-in"></span> Login
                         </Link>
                     </li>
                     ];

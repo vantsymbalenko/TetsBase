@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 import Search from '../components/Search';
 import { connect } from 'react-redux';
 import jsonData from '../json/file.json';
+import '../css/search.css';
 
 class search extends Component{
     render(){
         console.log(this.props.searchCat);
         return(
-            <Search searchCat = {this.props.searchCat}/>
+            <div>
+                <h1> Search Results</h1>
+                <ul className = "searchResults">
+                    <Search searchCat = {this.props.searchCat}/>
+                </ul>
+            </div>
         )
     }
 }
@@ -15,7 +21,6 @@ class search extends Component{
 function mapStateToProps(state){
     let keys = [];
     const categories = jsonData.categories;
-
     categories.map((item,index) => {
        for( let i=1;i<item.length;i++){
            if(item[i][0].includes(state.search.words)){

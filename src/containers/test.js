@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Quiz from '../components/Test/Quiz';
 import Result from '../components/Test/Result';
 import jsonData from '../json/file.json';
+import '../css/quiz.css';
+
 
  export default class test extends Component{
      constructor(props) {
@@ -24,8 +26,8 @@ import jsonData from '../json/file.json';
          const testId = +this.props.match.params.testId;
          const testTitle= jsonData.categories[categoryId][testId][0];
          this.quizQuestions = jsonData.categories[categoryId][testId][1];
-         // this.quizQuestions = JSON.parse(this.quizQuestions);
-         console.log(this.quizQuestions);
+         // this.quizQuestions = JSON.parse(JSON.stringify(this.quizQuestions));
+         console.log(typeof this.quizQuestions);
          console.log(typeof this.quizQuestions[0].answers[0].type);
          const shuffledAnswerOptions = this.quizQuestions.map((question) => this.shuffleArray(question.answers));
          this.setState({
@@ -117,7 +119,7 @@ import jsonData from '../json/file.json';
          return (
              <div className="App">
                  <div className="App-header">
-                     <h2>React Quiz</h2>
+                     <h1>{this.state.title}</h1>
                  </div>
                  {this.state.result !== "" ? this.renderResult() : this.renderQuiz()}
              </div>

@@ -4,15 +4,20 @@ import { Link } from 'react-router-dom';
 export default class Search extends Component{
     render(){
         console.log(this.props.searchCat);
-
+        if(this.props.searchCat.length === 0){
+            return(
+                <div className = "searchValue">
+                    <a>Sorry but we find nothing for you request</a>
+                </div>
+            );
+        }
         return(
             <div>
-                <h2> Search Results</h2>
                 {this.props.searchCat.map((item,index) => {
                     return (
-                        <li key = {index}>
+                        <li key = {index} className = "searchValue">
                             <Link to = {"/test/"+item.categoryId +"/"+item.testId}>
-                                {item.testTitle}
+                              {item.testTitle}
                             </Link>
                         </li>
                     );

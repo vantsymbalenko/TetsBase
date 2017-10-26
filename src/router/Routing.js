@@ -8,6 +8,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import '../css/Routing.css';
 
 import SingIn from '../containers/checkSingIn';
 import Home from '../containers/home';
@@ -16,6 +17,7 @@ import Search from '../containers/search';
 import Test from '../containers/test';
 import AllTests from '../containers/allTests';
 import About from '../containers/about';
+import Footer from '../containers/footer';
 
 export default class Routing extends Component{
     constructor(props){
@@ -27,7 +29,7 @@ export default class Routing extends Component{
     }
     render(){
         return(
-            <div>
+            <div className="">
                 <nav className="navbar navbar-inverse">
                     <div className="container-fluid">
                         <div className="navbar-header">
@@ -75,16 +77,19 @@ export default class Routing extends Component{
                         </div>
                     </div>
                 </nav>
-                <Switch>
-                    <Route exact path = '/' component = {Home}/>
-                    <Route path = '/about' component = {About}/>
-                    <Route path = '/profile' component = {Profile}/>
-                    <Route path = '/singIn' component = {SingIn}/>
-                    <Route path = '/allTests' component = {AllTests}/>
-                    <Route path = '/search'
-                    render = {(props) => <Search test = {this.test} {...props}/>} />
-                    <Route path = '/test/:categoryId/:testId' component = {Test}/>
-                </Switch>
+                <div className = "body-background">
+                    <Switch>
+                        <Route exact path = '/' component = {Home}/>
+                        <Route path = '/about' component = {About}/>
+                        <Route path = '/profile' component = {Profile}/>
+                        <Route path = '/singIn' component = {SingIn}/>
+                        <Route path = '/allTests' component = {AllTests}/>
+                        <Route path = '/search'
+                        render = {(props) => <Search test = {this.test} {...props}/>} />
+                        <Route path = '/test/:categoryId/:testId' component = {Test}/>
+                    </Switch>
+                </div>
+                <Footer/>
             </div>
         )
     }

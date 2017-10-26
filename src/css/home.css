@@ -1,13 +1,31 @@
 .home{
-    margin:0px auto;
+    margin:0 auto;
     width:90vw;
 }
 .slide img{
     width:100%;
-    height:80vh;
-    margin:0px auto;
-    /*margin: 100px;*/
+    margin:0 auto;
 }
-.slick-next{
-    background-color:red;
+.section-gradient{
+    text-align: center;
+}
+.section-gradient h1{
+    margin-top: 20vh;
+    font-size: 65px;
+    /*font-weight: 100;*/
+    /*font-family: 'Droid Sans', serif;*/
+    /*color: #fff;*/
+}
+.section-gradient p{
+    font-size: 1.375em;
+    width:45vw;
+    margin: 5vh auto;
+    font-weight: 100;
+    font-family: 'Droid Sans', serif;
+    color: #fff;
+}
+.section-gradient p span{
+    font-weight: bold;
+    font-family: 'Droid Sans', serif;
+    color: #fff;
 }

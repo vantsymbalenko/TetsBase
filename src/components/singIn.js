@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../css/login.css';
 
 export default class SingIn extends Component{
     constructor(props){
@@ -16,20 +17,45 @@ export default class SingIn extends Component{
     }
     render(){
         return(
-            <form>
-                <label>
-                    <div>Enter login</div>
-                    <input type="text" ref = {(input) => {this.inputLogin = input;}}/>
-                </label>
-                <label>
-                    <div>Enter password</div>
-                    <input type="text" ref = {(input) => { this.passwordInput = input;}}/>
-                </label>
-                <button onClick = {this.singIn}>Enter</button>
-                <button onClick = {this.singInOnFacebook}>Enter on Facebook</button>
-                <div>{this.props.errors}</div>
-                <div>{this.props.loading}</div>
-            </form>
+            <div className="wrapper">
+                <form className="form-signin">
+                    <h2 className="form-signin-heading">Please login</h2>
+                    <input
+                        type="text"
+                        ref = {(input) => { this.inputLogin = input;}}
+                        className="form-control login"
+                        name="username"
+                        placeholder="Login"
+                        required=""
+                        autoFocus="" />
+                    <input
+                        type="password"
+                        ref = {(input) => { this.passwordInput = input;}}
+                        className="form-control password"
+                        name="password"
+                        placeholder="Password"
+                        required=""/>
+                    <label className="checkbox">
+                        <input
+                            type="checkbox"
+                            value="remember-me"
+                            id="rememberMe"
+                            name="rememberMe"/> Remember me
+                    </label>
+                    <button
+                        className="btn btn-lg btn-primary btn-block"
+                        type="submit"
+                        onClick = {this.singIn}
+                    >Login</button>
+                    <button
+                        className="btn btn-lg btn-primary btn-block"
+                        type="submit"
+                        onClick = {this.singInOnFacebook}
+                    >Continue with Facebook</button>
+                    <div>{this.props.errors}</div>
+                    <div>{this.props.loading}</div>
+                </form>
+            </div>
          );
     }
 }

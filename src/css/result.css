@@ -1,0 +1,9 @@
+.result{
+    margin:18%;
+}
+.result p{
+    padding-left: 18%;
+    margin-bottom:40px;
+    color:red;
+    font-size:20px;
+}
