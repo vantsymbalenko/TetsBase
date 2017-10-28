@@ -15,7 +15,7 @@ import Home from '../containers/home';
 import Profile from '../containers/profile';
 import Search from '../containers/search';
 import Test from '../containers/test';
-import AllTests from '../containers/allTests';
+import AllTests from '../containers/testsList';
 import About from '../containers/about';
 import Footer from '../containers/footer';
 

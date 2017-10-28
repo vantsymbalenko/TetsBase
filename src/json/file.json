@@ -138,6 +138,51 @@
           }
         ]
       ]
+    ],
+    [
+      "English",
+      [
+        "English test 1",
+        [
+
+        ]
+      ],
+      [
+        "English test 2",
+        [
+
+        ]
+      ]
+    ],
+    [
+      "French",
+      [
+        "French test 1",
+        [
+
+        ]
+      ],
+      [
+        "French test 2",
+        [
+
+        ]
+      ]
+    ],
+    [
+      "IT",
+      [
+        "IT test 1",
+        [
+
+        ]
+      ],
+      [
+        "IT test 2",
+        [
+
+        ]
+      ]
     ]
   ],
   "auth" : {
