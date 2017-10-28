@@ -48,7 +48,7 @@ const promises = {
     fetch: () => {
         return new Promise((resolve,reject) => {
             window.FB.api(
-                '/me?fields=first_name,last_name,gender,birthday,picture.width(200).height(200)',
+                '/me?fields=first_name,last_name,gender,birthday,picture.width(200).height(200),cover',
                 response => response.error ? reject(response) : resolve(response)
             );
         });
@@ -78,11 +78,14 @@ export const Facebook = {
                 error => { throw error; }
             )
             .then(
-                response => { this.props.setAccessFB(
+                response => {
+                    console.log(response);
+                    this.props.setAccessFB(
                     response.first_name,
                     response.last_name,
                     response.birthday,
-                    response.picture.data.url
+                    response.picture.data.url,
+                    response.cover.source
                 );},
                 error => { throw error; }
             )

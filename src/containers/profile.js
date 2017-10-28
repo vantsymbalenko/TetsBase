@@ -5,11 +5,13 @@ import Profile from '../components/Profile';
 
 class profile extends Component{
     render(){
+        console.log(this.props.auth.cover);
         let access = this.props.auth.access,
             name = this.props.auth.name,
             surname = this.props.auth.surname,
             regDate = this.props.auth.regDate,
-            imgSrc = this.props.auth.imgSrc;
+            imgSrc = this.props.auth.imgSrc,
+            coverFotoSrc = this.props.auth.cover;
         if(access){
             return(
                 <Redirect to = {{ pathname: '/'}}/>
@@ -21,6 +23,7 @@ class profile extends Component{
                 surname = { surname }
                 regDate = { regDate }
                 imgSrc = { imgSrc }
+                coverFotoSrc = { coverFotoSrc }
               />
         );
     }
