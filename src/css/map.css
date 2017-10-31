@@ -1,0 +1,19 @@
+.about{
+    width: 80vw;
+    margin: 0 auto;
+    padding: 3vh 5vw 4vh 5vw;
+    background-color: #fff;
+}
+.about-item{
+    font-family: 'Ubuntu', sans-serif;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 26px;
+    color: #5b5f62;
+}
+.where-we h2{
+    margin:2vh;
+}
+.where-we{
+    margin-bottom:10vh;
+}
