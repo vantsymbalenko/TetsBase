@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b9e2aa6-4f6f-4cc5-aa66-cbd02cf7a956" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -358,7 +359,7 @@
       <workItem from="1509104249971" duration="9393000" />
       <workItem from="1509191342293" duration="11430000" />
       <workItem from="1509320599470" duration="6299000" />
-      <workItem from="1509456105842" duration="4188000" />
+      <workItem from="1509456105842" duration="4258000" />
     </task>
     <task id="LOCAL-00001" summary="fixed version of facebook authorization">
       <created>1505653150070</created>
@@ -416,11 +417,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509474600548</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="complete page about">
+      <created>1509474890055</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1509474890055</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259528000" />
+    <option name="totallyTimeSpent" value="259598000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
