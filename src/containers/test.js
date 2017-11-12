@@ -4,7 +4,6 @@ import Result from '../components/Test/Result';
 import jsonData from '../json/file.json';
 import '../css/quiz.css';
 
-
  export default class test extends Component{
      constructor(props) {
          super(props);
@@ -17,18 +16,13 @@ import '../css/quiz.css';
              answersCount: 0,
              result: ''
          };
-
          this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
      }
-     //
      componentWillMount() {
          const categoryId = +this.props.match.params.categoryId;
          const testId = +this.props.match.params.testId;
          const testTitle= jsonData.categories[categoryId][testId][0];
          this.quizQuestions = jsonData.categories[categoryId][testId][1];
-         // this.quizQuestions = JSON.parse(JSON.stringify(this.quizQuestions));
-         console.log(typeof this.quizQuestions);
-         console.log(typeof this.quizQuestions[0].answers[0].type);
          const shuffledAnswerOptions = this.quizQuestions.map((question) => this.shuffleArray(question.answers));
          this.setState({
              title: testTitle,

@@ -9,13 +9,13 @@ export default class Category extends Component{
             <div className="row">
                 {tests.map((item, categoryId) => {
                     return (
-                        <div className="col-lg-6 col-md-6">
+                        <div className="col-lg-6 col-md-6" key = { categoryId }>
                             <div className="wrapper1">
-                                <ul key = {categoryId}>
+                                <ul>
                                     {
                                         item.map((item, testId) => {
                                             if(typeof item === 'string'){
-                                                return <li key = {testId} className = "categoryTitle">
+                                                return <li key = { testId } className = "categoryTitle">
                                                     <span >{item}</span>
                                                 </li>
                                             }

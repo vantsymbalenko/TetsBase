@@ -20,12 +20,6 @@ export default class Footer extends Component{
                                 <li><Link to = "/singIn">Log In</Link></li>
                             </ul>
                         </div>
-                        {/*<div className="col-md-3">*/}
-                            {/*<ul className ="nav nav-pills nav-stacked">*/}
-                                {/*<li><a href="#">Web analytics</a></li>*/}
-                                {/*<li><a href="#">Presentations</a></li>*/}
-                            {/*</ul>*/}
-                        {/*</div>*/}
                         <div className ="col-md-4">
                             <ul className ="nav nav-pills nav-stacked">
                                 <li><Link to = "/about">Product Help</Link></li>

@@ -25,6 +25,82 @@
                 "content": "nF"
               }
             ]
+          },
+          {
+            "question": "If a 220 Om, a 100 Om , and a 180 Om resistor are connected in series across a 12 V source, the circuit current equals ___",
+            "answers": [
+              {
+                "type": false,
+                "content": "41.67 A"
+              },
+              {
+                "type": false,
+                "content": "120 mA"
+              },
+              {
+                "type": false,
+                "content": "500 A"
+              },
+              {
+                "type": true,
+                "content": "24 mA"
+              }
+            ]
+          },
+          {
+            "question": "The rms voltage value is a measure of a sine wave's heating effect.",
+            "answers": [
+              {
+                "type": true,
+                "content": "True"
+              },
+              {
+                "type": false,
+                "content": "False"
+              }
+            ]
+          },
+          {
+            "question": "A capacitor and an output resistor form a series circuit with a square wave applied. The circuit is:",
+            "answers": [
+              {
+                "type": false,
+                "content": "an integrator"
+              },
+              {
+                "type": true,
+                "content": "a differentiator"
+              },
+              {
+                "type": false,
+                "content": "a multiplier"
+              },
+              {
+                "type": false,
+                "content": "a divider"
+              }
+            ]
+          },
+          {
+            "question": "The quantity that represents an ideal capacitor dissipating 0 W of power is",
+            "answers": [
+              {
+                "type": false,
+                "content": "instantaneous power"
+              },
+              {
+                "type": true,
+                "content": "true power"
+              },
+              {
+                "type": false,
+                "content": "reactive power"
+              },
+              {
+                "type": false,
+                "content": "resistive power"
+              }
+            ]
           }
           ]
       ],

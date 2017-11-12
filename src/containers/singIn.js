@@ -2,24 +2,27 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+
+import SingIn from '../components/SingIn';
+
 import setAccess from '../action/setAccess';
 import setAccessFB from '../action/setAccessFB';
 import setLoading from '../action/setLoading';
-import { Facebook } from '../else/mixinsFacebook';
-import SingIn from '../components/singIn';
 
-class PrivateRouter extends Component{
+import { Facebook } from '../else/mixinsFacebook';
+
+class singIn extends Component{
     constructor(props){
         super(props);
         Facebook.doLogin = Facebook.doLogin.bind(this);
     }
     render(){
-        const loading = this.props.auth.loading ? <p>Please wait</p> : null;
+        const loading = this.props.authData.loading ? <p>Please wait</p> : null;
         return(
-            (this.props.auth.access) ?
+            (this.props.authData.access) ?
                 (<SingIn
                     setAccess = {this.props.setAccess}
-                    errors = {this.props.auth.errors}
+                    errors = {this.props.authData.errors}
                     checkFBLogin = { Facebook.doLogin }
                     loading = {loading}
                 /> )
@@ -30,10 +33,10 @@ class PrivateRouter extends Component{
 
 function mapStateToProps(state){
     return{
-        auth    : state.auth
-
+        authData    : state.authData
     }
 }
+
 function mapDispatchToProps(dispatch) {
     return{
         setAccess: bindActionCreators(setAccess, dispatch),
@@ -41,4 +44,5 @@ function mapDispatchToProps(dispatch) {
         loading: bindActionCreators(setLoading,dispatch)
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(PrivateRouter);
+
+export default connect(mapStateToProps, mapDispatchToProps)(singIn);

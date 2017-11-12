@@ -7,17 +7,22 @@ import {
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
-import 'bootstrap/dist/js/bootstrap.js';
-import '../css/Routing.css';
+import '../css/routing.css';
 
-import SingIn from '../containers/checkSingIn';
-import Home from '../containers/home';
+import SingIn from '../containers/singIn';
+import Home from '../components/Home';
 import Profile from '../containers/profile';
 import Search from '../containers/search';
 import Test from '../containers/test';
 import AllTests from '../containers/testsList';
-import About from '../containers/about';
+import About from '../components/About/About';
 import Footer from '../containers/footer';
+
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;
+global.jQuery = $;
+require('bootstrap');
 
 export default class Routing extends Component{
     constructor(props){
@@ -30,7 +35,8 @@ export default class Routing extends Component{
     render(){
         return(
             <div className="">
-                <nav className="navbar navbar-inverse">
+
+                <nav className="navbar navbar-default">
                     <div className="container-fluid">
                         <div className="navbar-header">
                             <button
@@ -45,7 +51,10 @@ export default class Routing extends Component{
                             </button>
                             <Link className="navbar-brand" to="/">WebSiteName</Link>
                         </div>
-                        <div className="collapse navbar-collapse" id="myNavbar">
+                        <div
+                            className="collapse navbar-collapse"
+                            id="myNavbar"
+                        >
                             <ul className="nav navbar-nav">
                                 <li><Link to="/about">About us</Link></li>
                                 <li><Link to="/allTests">All Tests</Link></li>
@@ -60,19 +69,19 @@ export default class Routing extends Component{
                                                 placeholder="Search"
                                                 ref = {(input) => {this.searchInput = input;}}
                                             />
-                                                <div className="input-group-btn">
-                                                    <Link
-                                                        to="/search"
-                                                        className="btn btn-default"
-                                                        onClick ={this.onClickSearch}
-                                                    >
-                                                            <i className="glyphicon glyphicon-search"></i>
-                                                    </Link>
-                                                </div>
+                                            <div className="input-group-btn">
+                                                <Link
+                                                    to="/search"
+                                                    className="btn btn-default"
+                                                    onClick ={this.onClickSearch}
+                                                >
+                                                    <i className="glyphicon glyphicon-search"></i>
+                                                </Link>
+                                            </div>
                                         </div>
                                     </form>
                                 </li>
-                                {this.props.logIn}
+                                {this.props.profile}
                             </ul>
                         </div>
                     </div>

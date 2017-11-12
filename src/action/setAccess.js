@@ -1,4 +1,4 @@
-import UserFotoSrc from '../image/foto.jpg';
+import UserFotoSrc from '../image/adminFoto.png';
 import CoverSrc from '../image/cover.jpg';
 
 export default function setAccess(login, password){
@@ -8,7 +8,7 @@ export default function setAccess(login, password){
             access: false,
             name: 'Name',
             surname: 'Surname',
-            regDate: new Date(1995, 2, 3).toISOString().substring(0, 10),
+            birthDate: new Date(1995, 2, 3).toISOString().substring(0, 10),
             imgSrc: UserFotoSrc,
             cover: CoverSrc
         }

@@ -1,0 +1,39 @@
+/*!*----navbar----*!*/
+.body-background{
+    width:100%;
+    min-height:90vh;
+    overflow: hidden;
+    background: #ff6d92 radial-gradient(circle at center,#f5b200 0,#fc636b 30%,#ff6d92 70%);
+    background-size: 300vw 300vh;
+    background-position: -100vw -120vh;
+}
+.body-background h1{
+    font-weight: 100;
+    font-family: 'Droid Sans', serif;
+    color: #fff;
+}
+.navbar-default {
+    background-color: #fbf5f5;
+    background-image: none;
+    background-repeat: no-repeat;
+    border:none;
+    padding:0;
+}
+.navbar-default .navbar-nav > li > a {
+    font-family: "Helvetica Neue",     Helvetica, sans-serif;
+    color: rgb(161, 164, 170);
+    font-size: 18px;
+    text-decoration-style:solid;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #80e6ff;
+ }
+.navbar{
+    margin-bottom: 0;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: rgb(161, 164, 170);
+}
+.navbar-default .navbar-toggle {
+    border-color: rgb(161, 164, 170);
+}

@@ -1,11 +1,11 @@
-export default function auth (state = {access : true }, action){
+export default function authData (state = {access : true }, action){
     switch(action.type){
         case 'SET_ACCESS':
             return {
                 access: action.access,
                 name: action.name,
                 surname: action.surname,
-                regDate: action.regDate,
+                birthDate: action.birthDate,
                 imgSrc: action.imgSrc,
                 cover: action.cover
             };

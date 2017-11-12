@@ -79,7 +79,6 @@ export const Facebook = {
             )
             .then(
                 response => {
-                    console.log(response);
                     this.props.setAccessFB(
                     response.first_name,
                     response.last_name,

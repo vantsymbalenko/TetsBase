@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-// import Test from '../components/Test';
-import Category from '../components/TestsList/CategorysList';
+import CategorysList from '../components/TestsList/CategorysList';
 import jsonData from '../json/file.json';
-// import '../css/categoryList.css';
 
 export default class allTests extends Component{
     componentWillMount(){
@@ -10,7 +8,7 @@ export default class allTests extends Component{
     }
     render(){
         return(
-            <Category tests = { this.tests }/>
+            <CategorysList tests = { this.tests }/>
         );
     }
 }

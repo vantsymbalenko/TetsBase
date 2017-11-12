@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+
 import Profile from '../components/Profile';
 
 class profile extends Component{
     render(){
-        console.log(this.props.auth.cover);
-        let access = this.props.auth.access,
-            name = this.props.auth.name,
-            surname = this.props.auth.surname,
-            regDate = this.props.auth.regDate,
-            imgSrc = this.props.auth.imgSrc,
-            coverFotoSrc = this.props.auth.cover;
+        let access = this.props.authData.access,
+            name = this.props.authData.name,
+            surname = this.props.authData.surname,
+            birthDate = this.props.authData.birthDate,
+            userPhotoSrc = this.props.authData.imgSrc,
+            coverPhotoSrc = this.props.authData.cover;
         if(access){
             return(
                 <Redirect to = {{ pathname: '/'}}/>
@@ -21,9 +21,9 @@ class profile extends Component{
               <Profile
                 name = { name }
                 surname = { surname }
-                regDate = { regDate }
-                imgSrc = { imgSrc }
-                coverFotoSrc = { coverFotoSrc }
+                birthDate = { birthDate }
+                userPhotoSrc = { userPhotoSrc }
+                coverPhotoSrc = { coverPhotoSrc }
               />
         );
     }
@@ -31,7 +31,7 @@ class profile extends Component{
 
 function mapStateToProps(state){
     return{
-        auth: state.auth
+        authData: state.authData
     }
 }
 
